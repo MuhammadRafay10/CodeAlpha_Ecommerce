@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">AlphaShop</div>
+        <nav>
+            <a href="#products-section" id="products-nav-btn">Products</a>
+            <a href="#" id="login-nav-btn">Login / Register</a>
+            <div class="cart-icon" id="cart-btn">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to CodeAlpha Store</h1>
+            <p>Find the best products at unbeatable prices!</p>
+        </section>
+
+        <section id="products-section" class="products-container">
+            <h2>Our Products</h2>
+            <div id="products-grid" class="products-grid">
+                <p>Loading products...</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items" style="margin-top: 20px; overflow-y: auto; max-height: 60vh;">
+                </div>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total-price">0.00</span></h3>
+            </div>
+            <button id="checkout-btn" class="btn">Checkout</button>
+        </div>
+    </div>
+
+    <div id="auth-modal" class="modal">
+        <div class="modal-content" style="max-width: 400px; margin: 50px auto;">
+            <span class="close-btn" id="close-auth">&times;</span>
+            
+            <div id="login-section">
+                <h2>Login</h2>
+                <form id="login-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                    <input type="email" id="login-email" placeholder="Email Address" required style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    <input type="password" id="login-password" placeholder="Password" required style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <p style="margin-top: 15px; text-align: center;">Don't have an account? <a href="#" id="go-to-register" style="color: #ff9f1c;">Register here</a></p>
+            </div>
+
+            <div id="register-section" style="display: none;">
+                <h2>Register</h2>
+                <form id="register-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                    <input type="text" id="register-name" placeholder="Full Name" required style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    <input type="email" id="register-email" placeholder="Email Address" required style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    <input type="password" id="register-password" placeholder="Password (Min 6 chars)" required style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    <button type="submit" class="btn">Register</button>
+                </form>
+                <p style="margin-top: 15px; text-align: center;">Already have an account? <a href="#" id="go-to-login" style="color: #ff9f1c;">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>AlphaShop</h3>
+                <p>Your one-stop destination for premium electronics and accessories. Built as part of the CodeAlpha Internship.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" id="footer-home">Home</a></li>
+                    <li><a href="#products-section" id="footer-products">Products</a></li>
+                    <li><a href="#" id="footer-about">About Us</a></li>
+                    <li><a href="#" id="footer-contact">Contact</a></li>
+                </ul>
+            </div>
+<div class="footer-social">
+    <h4>Follow Us</h4>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/YOUR_FACEBOOK_USERNAME" target="_blank" title="Facebook">📘 Facebook</a>
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" title="LinkedIn">💼 LinkedIn</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" title="GitHub">💻 GitHub</a>
+    </div>
+</div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AlphaShop. All Rights Reserved. | Designed for CodeAlpha Task 1</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

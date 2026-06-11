@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header & Navbar */
+header {
+    background-color: #1e1e24;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9f1c;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.cart-icon {
+    background: #ff9f1c;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1e1e24, #2a2a35);
+    color: white;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+}
+
+/* Products Grid */
+.products-container {
+    padding: 40px 5%;
+}
+
+.products-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Product Card */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background: #1e1e24;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #ff9f1c;
+    color: black;
+}
+
+/* Modal / Cart Sidebar */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.cart-total {
+    margin-top: auto;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1e1e24;
+    color: #fff;
+    padding: 40px 0 20px 0;
+    margin-top: 50px;
+    border-top: 4px solid #ff9f1c;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 5%;
+}
+
+.footer-brand h3 {
+    color: #ff9f1c;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff9f1c;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #ff9f1c;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+/* Responsive adjust for footer */
+@media (max-width: 768px) {
+    .footer-container {
+        text-align: center;
+    }
+
+  .social-icons a {
+    color: #ccc;
+    font-size: 0.95rem;
+    text-decoration: none;
+    margin-right: 15px;
+    display: inline-block;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: #ff9f1c; /* Hover karne par orange color ho jaye */
+}
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Is se links ek dusre ke upar aajayenge */
+    gap: 10px; /* Har link ke darmiyan thoda fasla rakhne ke liye */
+}
+
+.social-icons a {
+    color: #ccc;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+    width: fit-content; /* Taake hover effect sirf text par aaye */
+}
+
+.social-icons a:hover {
+    transform: translateX(5px); /* Hover karne par link thoda right side slide hoga jo pyara lagta hai */
+    color: #ff9f1c;
+}
